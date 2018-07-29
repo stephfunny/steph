@@ -274,7 +274,7 @@ footer {
 
 .social li {
   /* display: block; */
-  font-size: 3.5em;
+  font-size: 2.5em;
   list-style: none;
 }
 
@@ -572,7 +572,6 @@ footer {
   max-width: 85%;
   border-bottom: 1px solid #dcd9d9;
   text-align: center;
-
 }
 
 #projects h2 {
@@ -678,7 +677,7 @@ footer {
 
 #contact-icons li {
   display: inline-block;
-  font-size: 3.5em;
+  font-size: 2.5em;
   list-style: none;
   padding: 15px;
 }
