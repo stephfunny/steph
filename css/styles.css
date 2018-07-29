@@ -52,7 +52,7 @@ body {
 }
 
 #headshot {
-  width: 160px;
+  width: 20%;
   /* position: absolute; */
   margin-bottom: -55px;
   margin-right: 10px;
@@ -367,15 +367,19 @@ footer {
   position: sticky;
   top: 0;
   right: 0;
+  left: 0;
   float:right;
-  /* left: 0; */
-  /* width: 100%; */
+  max-width: 10%;
   text-align: right;
   z-index: 12;
-  /* bottom: 15px; */
-  /* color: rgb(255,255,255); */
-  /* color: black; */
-  display: inline-block;
+  color: rgb(255,255,255);
+  color: black;
+  /* bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  border: 1px solid black;
+  align-items: flex-end; */
 }
 
 @keyframes pulsate {
@@ -408,7 +412,8 @@ footer {
 
 #experience {
   padding: 50px 15px;
-  margin-right: 100px;
+  /* margin-right: 100px; */
+  max-width: 85%;
   text-align: center;
   border-bottom: 1px solid #dcd9d9
 }
@@ -563,7 +568,8 @@ footer {
 
 #projects {
   padding: 50px 15px;
-  margin-right: 100px;
+  /* margin-right: 100px; */
+  max-width: 85%;
   border-bottom: 1px solid #dcd9d9;
   text-align: center;
 
