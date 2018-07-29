@@ -13,20 +13,14 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
-    </div>
-    <!-- End #mobile-menu-toggle -->
+
     <div>
 
     <div>
     <header>
 
-        <div id="mobile-menu-close">
-            <!-- <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i> -->
-        </div>
-        <ul id="menu" class="shadow hvr-line">
-            <li class="hvr-line">
+        <ul id="menu" class="">
+            <li class="">
                 <a href="#about">About</a>
             </li>
             <li>
@@ -47,31 +41,14 @@
             </li>
         </ul>
 
-        <!-- Rounded switch -->
-        <div id='switch-css'>
-          <div>
-            <label class="switch">
-              <input id='switchcss' type="checkbox">
-              <span class="slider round"></span>
-            </label>
-          </div>
-
-          <div id='dark-side'>
-            Enter the dark side.
-          </div>
-        </div>
 
     </header>
     <!-- End header -->
 
 
-
     <div id="lead">
+
         <div id="lead-content">
-
-
-
-
           <div>
             <img id='logo' src="./images/logo-black.png" width='400px' alt="Stephanie Fong Logo">
           </div>
@@ -91,9 +68,43 @@
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
             </span>
         </div>
+
+
         <!-- End #lead-down -->
+
+
+
     </div>
     <!-- End #lead -->
+
+    <div id='left-sidebar'>
+      <!-- Rounded switch -->
+      <div id='switch-css'>
+        <div>
+          <label class="switch">
+            <input id='switchcss' type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div id='dark-side'>
+          Enter the dark side.
+        </div>
+      </div>
+      <br>
+      <div class='social'>
+        <ul>
+          <li>
+            <a href="mailto:contactstephanief@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="https://github.com/stephfunny" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/stephanie-fong" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <div id="about">
         <div class="container">
@@ -289,12 +300,15 @@
         <div class="education-block">
             <h3>University of California, Davis </h3>
             <span class="education-date">Sept 2010 - June 2015</span>
-            <h4>Bachelor of Science in General Mathematics</h4>
-            <h4>Bachelor of Science in Managerial Economics</h4>
-            <p>
+            <br>
+            <br>
+            <div> B.S. in General Mathematics</div>
+            <div> B.S. in Managerial Economics</div>
+            <span>
               GPA: 3.88 / 4.00 <br>
-            </p>
-            <span>Activities</span>
+            </span>
+            <br>
+            <div>Activities</div>
             <ul>
               <li>
                 Delta Sigma Pi Professional Business Fraternity:
@@ -314,8 +328,19 @@
                 </ul>
               </li>
               <li>
-                Business Career & Networking Club (BCNC): Founding member, Activities Coordinator, Fundraising Chair
+                Business Career & Networking Club (BCNC):
+                <ul>
+                    <li>
+                      Founding member
+                    </li>
+                    <li>
+                      Activities Coordinator
+                    </li>
+                    <li>
+                      Fundraising Chair
+                    </li>
               </li>
+            </ul>
               <li>
                 Dean's Honor List, Letters and Science
               </li>
@@ -335,13 +360,18 @@
 
     <div id="contact">
         <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/contactstephanief@gmail.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+        <div id='contact-icons'>
+          <ul>
+            <li>
+              <a href="mailto:contactstephanief@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/stephfunny" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/stephanie-fong" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </li>
+          </ul>
         </div>
         <!-- End #contact-form -->
     </div>
@@ -360,22 +390,7 @@
                         <i class="fa fa-chevron-up" aria-hidden="true"></i>
                     </span>
                 </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/stephfunny" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/stephanie-fong" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/stephhhfunny" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </footer>

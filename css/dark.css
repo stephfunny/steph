@@ -1,7 +1,8 @@
 body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
-  background: rgb(37, 82, 91);
+  background: rgb(37,82,91);
+  margin: 0px;
 }
 
 #logo {
@@ -30,7 +31,7 @@ body.active {
 #skills li:hover {
   background: grey;
   color: white;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .btn-rounded-white {
@@ -39,7 +40,9 @@ body.active {
   padding: 15px 25px;
   border: 3px solid black;
   border-radius: 30px;
-  transition: .5s ease all
+  transition: .5s ease all;
+  text-decoration: none;
+
 }
 
 .btn-rounded-white:hover {
@@ -48,11 +51,11 @@ body.active {
   text-decoration: none
 }
 
-.no-js #experience-timeline>div {
-  background: rgb(140, 38, 35);
+/* .no-js #experience-timeline>div {
+  background: rgb(140,38,35);
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #dcd9d9
+  border: 1px solid rgb(199,199,199)
 }
 
 .no-js #experience-timeline>div h3 {
@@ -66,7 +69,7 @@ body.active {
 .no-js #experience-timeline>div h4 {
   font-size: 1.2em;
   font-weight: 300;
-  color: #7e8890;
+  color: rgb(126,126,126);
   margin: 0 0 15px 0
 }
 
@@ -78,7 +81,7 @@ body.active {
 
 .no-js #experience-timeline:before, .no-js #experience-timeline:after {
   content: none
-}
+} */
 
 /* @keyframes dropHeader {
   0% {
@@ -93,7 +96,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  right: 170px;
+  right: 0;
   text-align: center;
   z-index: 10;
   animation-name: dropHeader;
@@ -104,7 +107,7 @@ header {
 
 header ul {
   display: inline-block;
-  background: rgb(140,38,35, .9);
+  background: rgb(140,33,49, .9);
   text-align: center;
   padding: 10px;
   margin: 0;
@@ -119,7 +122,8 @@ header li {
 
 header a {
   color: black;
-  padding: 10px;
+  padding: 15px;
+  text-decoration: none;
 }
 
 header a:focus {
@@ -190,7 +194,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
   left: 0;
   right: 0;
   margin: 0 auto;
-  background: rgb(140,38,35);
+  background: rgb(140,33,49);
   }
 
 #menu.active {
@@ -222,19 +226,19 @@ header a:hover:before, header a:focus:before, header a:active:before {
 }
 
 .social li {
-  display: inline-block;
-  font-size: 2.25em;
-  list-style: none
+  /* display: block; */
+  font-size: 3.5em;
+  list-style: none;
 }
 
 .social a {
   display: block;
   color: white;
-  padding: 10px
+  padding: 10px;
 }
 
 .social a:hover {
-  color: rgb(140,38,35);
+  color: rgb(140,33,49);
 }
 
 #lead {
@@ -244,7 +248,6 @@ header a:hover:before, header a:focus:before, header a:active:before {
   max-height: 1080px;
   background: url(../images/macbook-2.png);
   background-size: cover;
-  padding: 15px;
   overflow: hidden
 }
 
@@ -257,10 +260,6 @@ header a:hover:before, header a:focus:before, header a:active:before {
   text-align: center
 }
 
-#lead-content h1, #lead-content h2 {
-  margin: 0
-}
-
 #lead-content h1 {
   color: rgb(250,250,250);
   font-weight: 900;
@@ -271,7 +270,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
 }
 
 #lead-content h2 {
-  color: rgb(140,38,35);
+  color: rgb(140,33,49);
   font-weight: 500;
   font-size: 2.25em;
   margin-bottom: 15px
@@ -286,7 +285,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
   bottom: 0;
   left: 0;
   background: rgba(125, 125, 125, 0.8);
-  z-index: 1
+  z-index: 1;
 }
 
 #lead-down {
@@ -307,7 +306,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: 3px solid rgb(140,38,35);
+  border: 3px solid rgb(140,33,49);
   text-align: center
 }
 
@@ -315,6 +314,21 @@ header a:hover:before, header a:focus:before, header a:active:before {
   animation: pulsate 1.5s ease;
   animation-iteration-count: infinite;
   padding-top: 5px
+}
+#left-sidebar {
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  right: 0;
+  /* float:left; */
+  /* left: 0; */
+  /* width: 100%; */
+  text-align: right;
+  z-index: 12;
+  float: right;
+  /* bottom: 15px; */
+  color: rgb(255,255,255);
+  display: inline-block;
 }
 
 @keyframes pulsate {
@@ -331,7 +345,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
 
 #about {
   padding: 75px 15px;
-  border-bottom: 1px solid #dcd9d9
+  border-bottom: 1px solid rgb(199,199,199)
 }
 
 #about h2 {
@@ -339,19 +353,24 @@ header a:hover:before, header a:focus:before, header a:active:before {
 }
 
 #about p {
-  color: white;;
+  color: white;
   margin: 0
 }
 
 #experience {
   padding: 50px 15px;
   text-align: center;
-  border-bottom: 1px solid #dcd9d9
+  border-bottom: 1px solid rgb(199,199,199)
 }
 
 #experience h2 {
   color: white
 }
+#experience h4 {
+  color: white;
+  /* font-style: italic; */
+}
+
 
 #experience-timeline {
   margin: 30px auto 0 auto;
@@ -364,11 +383,11 @@ header a:hover:before, header a:focus:before, header a:active:before {
   content: '';
   top: 0;
   bottom: 0;
-  left: 303px;
+  left: 203px;
   right: auto;
   height: 100%;
   width: 3px;
-  background: rgb(140,38,35);
+  background: rgb(140,33,49);
   z-index: 0
 }
 
@@ -377,15 +396,18 @@ header a:hover:before, header a:focus:before, header a:active:before {
   content: '';
   width: 3px;
   height: 40px;
-  background: rgb(140,38,35);
-  background: linear-gradient(to bottom, rgb(140,38,35), rgba(52, 152, 219, 0));
+  background: rgb(140,33,49);
+  background: linear-gradient(to bottom, rgb(140,33,49), rgba(52, 152, 219, 0));
   top: 100%;
-  left: 303px
+  left: 203px
+}
+#experience li {
+  color: rgb(210,210,210);
 }
 
 .vtimeline-content {
-  margin-left: 350px;
-  background: rgb(127, 21, 21);
+  margin-left: 250px;
+  background: rgb(140,33,49);
   border: 1px solid #e6e6e6;
   padding: 15px;
   border-radius: 3px;
@@ -403,7 +425,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
 .vtimeline-content h4 {
   font-size: 1.2em;
   font-weight: 300;
-  color: #7e8890;
+  color: rgb(126,126,126);
   margin: 0 0 15px 0
 }
 
@@ -425,11 +447,11 @@ header a:hover:before, header a:focus:before, header a:active:before {
   color: white;
   width: 50px;
   height: 50px;
-  background: rgb(140, 57, 35);
+  background: rgb(140,57,35);
   border-radius: 50%;
   float: left;
   z-index: 99;
-  margin-left: 280px
+  margin-left: 180px
 }
 
 .vtimeline-icon i {
@@ -439,7 +461,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
 }
 
 .vtimeline-date {
-  width: 260px;
+  width: 170px;
   text-align: right;
   position: absolute;
   left: 0;
@@ -450,7 +472,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
 
 #education {
   padding: 50px 15px 20px 15px;
-  border-bottom: 1px solid #dcd9d9;
+  border-bottom: 1px solid rgb(140,33,49);
   text-align: center
 }
 
@@ -463,32 +485,37 @@ header a:hover:before, header a:focus:before, header a:active:before {
   max-width: 700px;
   margin: 0 auto 30px auto;
   padding: 15px;
-  border: 1px solid #dcd9d9;
-  text-align: left
+  border: 1px solid rgb(199,199,199);
+  text-align: left;
+  background-color: rgb(199,199,199);
+  border: 1px solid white;
 }
 
 .education-block h3 {
   font-weight: 500;
   float: left;
   margin: 0;
-  color: white
+  color: black;
 }
 
 .education-block span {
-  color: white;;
+  color: black;
   float: right
 }
 
 .education-block h4 {
-  color: white;;
+  color: black;
   clear: both;
   font-weight: 500;
   margin: 0 0 15px 0
 }
+.education-block h4:hover {
+  /* color: white; */
+}
 
 .education-block p, .education-block ul {
   margin: 0;
-  color: white;;
+  color: black;
   font-size: 0.9em
 }
 
@@ -498,8 +525,9 @@ header a:hover:before, header a:focus:before, header a:active:before {
 
 #projects {
   padding: 50px 15px;
-  border-bottom: 1px solid #dcd9d9;
-  text-align: center;
+  margin-right: 100px;
+  border-bottom: 1px solid rgb(199,199,199);
+  /* text-align: center; */
 }
 
 #projects h2 {
@@ -509,7 +537,9 @@ header a:hover:before, header a:focus:before, header a:active:before {
 
 #projects img {
   width: 300px;
-  border: 1px solid grey;
+  /* border: 1px solid black; */
+  /* padding: 5px; */
+  margin: 5px;
 }
 
 .project {
@@ -517,8 +547,9 @@ header a:hover:before, header a:focus:before, header a:active:before {
   max-width: 900px;
   margin: 0 auto 30px auto;
   overflow: hidden;
-  background: rgb(140,38,35);
-  border-radius: 4px
+  background: rgb(140,33,49);
+  border-radius: 4px;
+  border: 1px solid black;
 }
 
 .project-image {
@@ -540,12 +571,17 @@ header a:hover:before, header a:focus:before, header a:active:before {
   margin: 0 0 15px 0
 }
 
-.project-info p {
-  color: white;;
+/* .project-info p {
+  color: white;
+  margin: 0 0 15px 0;
+  font-size: 0.9em
+} */
+.project-info li {
+  color: rgb(210,210,210);
+  /* color: white; */
   margin: 0 0 15px 0;
   font-size: 0.9em
 }
-
 .no-image .project-info {
   position: relative;
   margin: 0;
@@ -587,7 +623,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
 
 #contact {
   padding: 50px 15px;
-  background: rgb(140,38,35);
+  background: rgb(140,33,49);
   text-align: center
 }
 
@@ -601,7 +637,57 @@ header a:hover:before, header a:focus:before, header a:active:before {
   max-width: 500px;
   margin: 0 auto
 }
+#contact-icons li {
+  display: inline-block;
+  font-size: 3.5em;
+  list-style: none;
+  padding: 15px;
+}
 
+#contact-icons a {
+  /* display: block; */
+  color: #74808a;
+  padding: 10px
+}
+
+#contact-icons a:hover {
+  color: white;
+
+    -webkit-animation-name: wiggle;
+    -ms-animation-name: wiggle;
+    -ms-animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out;
+  }
+
+
+}
+@-webkit-keyframes wiggle {
+  0% {-webkit-transform: rotate(10deg);}
+  25% {-webkit-transform: rotate(-10deg);}
+  50% {-webkit-transform: rotate(10deg);}
+  75% {-webkit-transform: rotate(-5deg);}
+  100% {-webkit-transform: rotate(0deg);}
+}
+
+@-ms-keyframes wiggle {
+  0% {-ms-transform: rotate(1deg);}
+  25% {-ms-transform: rotate(-1deg);}
+  50% {-ms-transform: rotate(1.0deg);}
+  75% {-ms-transform: rotate(-5deg);}
+  100% {-ms-transform: rotate(0deg);}
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(10deg);}
+  25% {transform: rotate(-10deg);}
+  50% {transform: rotate(10deg);}
+  75% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
+}
 #contact-form input, #contact-form textarea {
   display: block;
   width: 100%;
@@ -649,7 +735,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
   border-radius: 4px;
   padding: 5px 10px;
   border: none;
-  color: rgb(140, 57, 35);
+  color: rgb(140,33,49);
   font-weight: 700;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: .5s ease all
@@ -662,7 +748,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
 .optional-section {
   padding: 50px 15px;
   text-align: center;
-  border-top: 1px solid #dcd9d9
+  border-top: 1px solid rgb(199,199,199)
 }
 
 .optional-section h2 {
@@ -673,7 +759,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
   max-width: 700px;
   margin: 0 auto 30px auto;
   padding: 15px;
-  border: 1px solid #dcd9d9;
+  border: 1px solid rgb(199,199,199);
   background: rgb(250,250,250);
   text-align: left
 }
@@ -822,15 +908,14 @@ header a:hover:before, header a:focus:before, header a:active:before {
     border: 3px solid #b9bfc4;
     text-align: center
   }
-  .social {
-    /* background: red; */
-    text-align: center
+
   }
+
   footer {
     text-align: center
   }
   .social {
-    text-align: center
+    /* text-align: center */
   }
 }
 
@@ -910,10 +995,4 @@ input:checked+.slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-#switch-css {
-  float: left;
-  padding: 20px;
-  text-align: left;
 }

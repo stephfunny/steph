@@ -2,6 +2,41 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   /* background: rgb(225,225,225); */
+  margin: 0px;
+}
+#contact-icons li:hover {
+  -webkit-animation-name: wiggle;
+  -ms-animation-name: wiggle;
+  -ms-animation-duration: 1000ms;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes wiggle {
+  0% {-webkit-transform: rotate(10deg);}
+  25% {-webkit-transform: rotate(-10deg);}
+  50% {-webkit-transform: rotate(10deg);}
+  75% {-webkit-transform: rotate(-5deg);}
+  100% {-webkit-transform: rotate(0deg);}
+}
+
+@-ms-keyframes wiggle {
+  0% {-ms-transform: rotate(1deg);}
+  25% {-ms-transform: rotate(-1deg);}
+  50% {-ms-transform: rotate(1.0deg);}
+  75% {-ms-transform: rotate(-5deg);}
+  100% {-ms-transform: rotate(0deg);}
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(10deg);}
+  25% {transform: rotate(-10deg);}
+  50% {transform: rotate(10deg);}
+  75% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
 }
 
 #logo {
@@ -16,10 +51,8 @@ body {
 #headshot {
   width: 160px;
   /* position: absolute; */
-  /* top: 0; */
   margin-bottom: -55px;
   margin-right: 10px;
-  /* line-height: 200px; */
 }
 
 body.active {
@@ -30,16 +63,16 @@ body.active {
 #skills li:hover {
   background: grey;
   color: white;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
-
 .btn-rounded-white {
   display: inline-block;
   color: #fff;
   padding: 15px 25px;
   border: 3px solid #fff;
   border-radius: 30px;
-  transition: .5s ease all
+  transition: .5s ease all;
+  text-decoration: none;
 }
 
 .btn-rounded-white:hover {
@@ -48,52 +81,20 @@ body.active {
   text-decoration: none
 }
 
-.no-js #experience-timeline>div {
-  background: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #dcd9d9
-}
-
-.no-js #experience-timeline>div h3 {
-  font-size: 1.5em;
-  font-weight: 300;
-  color: #374054;
-  display: inline-block;
-  margin: 0
-}
-
-.no-js #experience-timeline>div h4 {
-  font-size: 1.2em;
-  font-weight: 300;
-  color: #7e8890;
-  margin: 0 0 15px 0
-}
-
-.no-js #experience-timeline>div p {
-  color: #74808a;
-  font-size: 0.9em;
-  margin: 0
-}
-
-.no-js #experience-timeline:before, .no-js #experience-timeline:after {
-  content: none
-}
-
-/* @keyframes dropHeader {
+@keyframes dropHeader {
   0% {
     transform: translateY(-100%)
   }
   100% {
     transform: translateY(0)
   }
-} */
+}
 
 header {
   position: absolute;
   top: 0;
   left: 0;
-  right: 170px;
+  right: 0;
   text-align: center;
   z-index: 10;
   animation-name: dropHeader;
@@ -109,16 +110,19 @@ header ul {
   padding: 10px;
   margin: 0;
   border-bottom-right-radius:4px;
-  border-bottom-left-radius:4px
+  border-bottom-left-radius:4px;
 }
 
 header li {
   display: inline-block;
+  font-size: 20px;
+  font-weight: 200;
 }
 
 header a {
   color: RGB(40, 40, 40);
-  padding: 10px;
+  padding: 15px;
+  text-decoration: none;
 }
 
 header a:focus {
@@ -126,7 +130,7 @@ header a:focus {
 }
 
 header.active {
-  display: block
+  /* display: block */
 }
 
 header.sticky {
@@ -188,15 +192,15 @@ header a:hover:before, header a:focus:before, header a:active:before {
   left: 0;
   right: 0;
   margin: 0 auto;
-  background: #a16262
+  background: #a16262;
 }
 
 #menu.active {
-  display: block
+  display: block;
 }
 
 .top {
-  text-align: center
+  text-align: center;
 }
 
 .top span {
@@ -207,22 +211,22 @@ header a:hover:before, header a:focus:before, header a:active:before {
   height: 35px;
   border-radius: 50%;
   border: 3px solid #b9bfc4;
-  text-align: center
+  text-align: center;
 }
 
 .top i {
-  color: #74808a
+  color: #74808a;
 }
 
 .social ul {
   margin: 5px 0 0 0;
-  padding: 0
+  padding: 0;
 }
 
 .social li {
-  display: inline-block;
-  font-size: 2.25em;
-  list-style: none
+  /* display: block; */
+  font-size: 3.5em;
+  list-style: none;
 }
 
 .social a {
@@ -242,8 +246,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
   max-height: 1080px;
   background: url(../images/macbook-2.png);
   background-size: cover;
-  padding: 15px;
-  overflow: hidden
+  overflow: hidden;
 }
 
 #lead-content {
@@ -252,11 +255,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center
-}
-
-#lead-content h1, #lead-content h2 {
-  margin: 0
+  text-align: center;
 }
 
 #lead-content h1 {
@@ -314,6 +313,21 @@ header a:hover:before, header a:focus:before, header a:active:before {
   animation-iteration-count: infinite;
   padding-top: 5px
 }
+#left-sidebar {
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  right: 0;
+  float:right;
+  /* left: 0; */
+  /* width: 100%; */
+  text-align: right;
+  z-index: 12;
+  /* bottom: 15px; */
+  /* color: rgb(255,255,255); */
+  /* color: black; */
+  display: inline-block;
+}
 
 @keyframes pulsate {
   0% {
@@ -329,7 +343,9 @@ header a:hover:before, header a:focus:before, header a:active:before {
 
 #about {
   padding: 75px 15px;
-  border-bottom: 1px solid #dcd9d9
+  border-bottom: 1px solid #cc9999;
+  margin-right: 100px;
+
 }
 
 #about h2 {
@@ -343,6 +359,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
 
 #experience {
   padding: 50px 15px;
+  margin-right: 100px;
   text-align: center;
   border-bottom: 1px solid #dcd9d9
 }
@@ -362,7 +379,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
   content: '';
   top: 0;
   bottom: 0;
-  left: 303px;
+  left: 203px;
   right: auto;
   height: 100%;
   width: 3px;
@@ -378,11 +395,11 @@ header a:hover:before, header a:focus:before, header a:active:before {
   background: #cc9999;
   background: linear-gradient(to bottom, #cc9999, rgba(52, 152, 219, 0));
   top: 100%;
-  left: 303px
+  left: 203px
 }
 
 .vtimeline-content {
-  margin-left: 350px;
+  margin-left: 250px;
   background: #fff;
   border: 1px solid #e6e6e6;
   padding: 15px;
@@ -427,7 +444,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
   border-radius: 50%;
   float: left;
   z-index: 99;
-  margin-left: 280px
+  margin-left: 180px
 }
 
 .vtimeline-icon i {
@@ -437,7 +454,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
 }
 
 .vtimeline-date {
-  width: 260px;
+  width: 170px;
   text-align: right;
   position: absolute;
   left: 0;
@@ -448,6 +465,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
 
 #education {
   padding: 50px 15px 20px 15px;
+  /* padding-right: 30px; */
   border-bottom: 1px solid #dcd9d9;
   text-align: center
 }
@@ -496,8 +514,10 @@ header a:hover:before, header a:focus:before, header a:active:before {
 
 #projects {
   padding: 50px 15px;
+  margin-right: 100px;
   border-bottom: 1px solid #dcd9d9;
   text-align: center;
+
 }
 
 #projects h2 {
@@ -507,7 +527,8 @@ header a:hover:before, header a:focus:before, header a:active:before {
 
 #projects img {
   width: 300px;
-  border: 1px solid grey;
+  margin: 5px;
+  /* border: 1px solid grey; */
 }
 
 .project {
@@ -516,7 +537,8 @@ header a:hover:before, header a:focus:before, header a:active:before {
   margin: 0 auto 30px auto;
   overflow: hidden;
   background: #fff;
-  border-radius: 4px
+  border-radius: 4px;
+  border: 1px solid grey;
 }
 
 .project-image {
@@ -562,14 +584,15 @@ header a:hover:before, header a:focus:before, header a:active:before {
 
 #skills h2 {
   color: #374054;
-  margin-bottom: 50px
+  margin-bottom: 50px;
+
 }
 
 #skills ul {
   display: block;
   margin: 0 auto;
   padding: 0;
-  max-width: 800px
+  max-width: 800px;
 }
 
 #skills li {
@@ -586,58 +609,34 @@ header a:hover:before, header a:focus:before, header a:active:before {
 #contact {
   padding: 50px 15px;
   background: #cc9999;
-  text-align: center
+  text-align: center;
+  font-size: 20px;
+  /* display: inline-block; */
 }
 
 #contact h2 {
   margin: 0 0 15px 0;
   color: #fff;
-  font-weight: 500
+  font-weight: 500;
 }
 
-#contact-form {
-  max-width: 500px;
-  margin: 0 auto
+
+#contact-icons li {
+  display: inline-block;
+  font-size: 3.5em;
+  list-style: none;
+  padding: 15px;
 }
 
-#contact-form input, #contact-form textarea {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  border: none;
-  margin-bottom: 10px;
-  background: #676767;
-  color: #fff;
-  transition: .5s ease all
+#contact-icons a {
+  /* display: block; */
+  color: #74808a;
+  padding: 10px
 }
 
-#contact-form input::-webkit-input-placeholder, #contact-form textarea::-webkit-input-placeholder {
-  color: #fff
-}
+#contact-icons a:hover {
+  color: white;
 
-#contact-form input:-moz-placeholder, #contact-form textarea:-moz-placeholder {
-  color: #fff;
-  opacity: 1
-}
-
-#contact-form input::-moz-placeholder, #contact-form textarea::-moz-placeholder {
-  color: #fff;
-  opacity: 1
-}
-
-#contact-form input:-ms-input-placeholder, #contact-form textarea:-ms-input-placeholder {
-  color: #fff
-}
-
-#contact-form input:focus, #contact-form textarea:focus {
-  outline: none;
-  background: #a3a3a3
-}
-
-#contact-form textarea {
-  height: 150px;
-  resize: none
 }
 
 #contact-form button {
@@ -767,7 +766,7 @@ header a:hover:before, header a:focus:before, header a:active:before {
   }
   #menu li {
     display: block;
-    margin-bottom: 10px
+    margin-bottom: 10px;
   }
   #lead-content h1 {
     font-size: 2em
@@ -800,8 +799,9 @@ header a:hover:before, header a:focus:before, header a:active:before {
   footer {
     padding: 50px 0
   }
+
   .copyright {
-    padding-top: 20px
+    padding-top: 20px;
   }
   .copyright p {
     margin: 0;
@@ -820,18 +820,15 @@ header a:hover:before, header a:focus:before, header a:active:before {
     border: 3px solid #b9bfc4;
     text-align: center
   }
-  .social {
-    /* background: red; */
-    text-align: center
-  }
+
   footer {
     text-align: center
   }
-  .social {
-    text-align: center
-  }
-}
 
+}
+footer {
+  text-align: center
+}
 @media only screen and (max-width: 480px) {
   #lead-content h1 {
     font-size: 1.5em
@@ -896,19 +893,3 @@ header a:hover:before, header a:focus:before, header a:active:before {
   .slider.round:before {
     border-radius: 50%;
   }
-
-#switch-css {
-  float: left;
-  padding: 20px;
-  text-align: left;
-
-  /* right: 0px; */
-  /* display: block; */
-  position: sticky;
-  /* right: -40px; */
-}
-#switch-css div {
-  /* text-align: left; */
-  /* display: block; */
-  /* float: left; */
-}
