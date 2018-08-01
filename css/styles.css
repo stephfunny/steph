@@ -587,7 +587,7 @@ footer {
   color: white;
   background-color: white;
   transform: translateZ(-6px) scale(7) translateY(-25vh);
-  /* perspective: 1000px; */ }
+  perspective: 1000px; }
 
 circle:hover {
   fill: white;
