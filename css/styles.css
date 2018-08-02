@@ -48,7 +48,6 @@ body.active {
   100% {
     transform: translateY(0); } }
 header {
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -92,8 +91,6 @@ header a {
   /* padding: 1.0em .5em; */
   display: inline-block;
   /* vertical-align: super; */
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0);
   position: relative;
   overflow: hidden; }
@@ -219,8 +216,11 @@ ul, li {
   align-items: flex-end; */ }
 
 #lead {
-  position: relative;
+  position: absolute;
   height: 100vh;
+  z-index: 15;
+  float: left;
+  top: 0;
   /* background: url(../images/macbook-2.png); */
   /* background-size: cover; */
   /* overflow: hidden; */ }
@@ -229,7 +229,7 @@ ul, li {
   margin: 1vh;
   margin-bottom: 0px;
   position: absolute;
-  z-index: 10;
+  z-index: 15;
   top: 0;
   left: 0; }
   #lead-content .logo-content {
@@ -259,12 +259,13 @@ ul, li {
     width: 70vw; }
 
 #lead-down {
+  display: none;
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 47vw;
+  right: 0vw;
   width: 100%;
   text-align: center;
-  z-index: 10;
+  z-index: 18;
   bottom: 15px;
   color: #fff; }
 
@@ -586,8 +587,7 @@ footer {
   fill: white;
   color: white;
   background-color: white;
-  transform: translateZ(-6px) scale(7) translateY(-25vh);
-  perspective: 1000px; }
+  transform: translateZ(-6px) scale(7) translateY(-25vh); }
 
 circle:hover {
   fill: white;
@@ -653,7 +653,7 @@ circle:hover {
   margin-top: -5px;
   background-color: #111115;
   width: 100vw;
-  height: 125vh; }
+  height: 135vh; }
 
 #city4 {
   /* transform: translateY(25vh) translateZ(0px) ; */
