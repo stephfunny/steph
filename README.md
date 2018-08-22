@@ -1,4 +1,4 @@
 # steph
 My Website Portfolio
 
-stephaniefong.me
+www.stephaniefong.me
